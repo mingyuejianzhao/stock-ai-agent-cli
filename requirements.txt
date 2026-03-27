@@ -1,0 +1,4 @@
+akshare
+crewai
+openai
+python-dotenv

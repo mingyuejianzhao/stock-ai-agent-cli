@@ -1,0 +1,13 @@
+.env
+.env.*
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+.DS_Store
+Thumbs.db
+venv/
+.venv/
