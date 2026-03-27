@@ -2,9 +2,10 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](#)
+[![CrewAI](https://img.shields.io/badge/CrewAI-Multi--Agent-6f42c1)](https://github.com/crewAIInc/crewAI)
 [![GitHub stars](https://img.shields.io/github/stars/mingyuejianzhao/stock-ai-agent-cli?style=social)](https://github.com/mingyuejianzhao/stock-ai-agent-cli/stargazers)
 
-一句话 / One‑liner：用 “Fear & Greed（代理）” 快速读市场情绪 + Bull/Bear/Hold/Judge 多 Agent 辩论，输出可直接接入工作流的结构化 JSON。
+一句话 / One‑liner：基于 CrewAI 的多 Agent 架构（Bull/Bear/Hold/Judge）+ “Fear & Greed（代理）” 市场情绪快照，输出可直接接入工作流的结构化 JSON。
 
 中文 / English
 - [中文介绍](#中文介绍)
@@ -14,7 +15,7 @@
 
 ## 中文介绍
 
-这是一个命令行小工具：输入 A 股股票代码与天数，程序会抓取最近 N 天的收盘价与市场情绪信息（含“恐惧与贪婪指数”代理指标），并让大模型以“看多 / 看空 / 持有 / 最终决策”四个角色输出结构化 JSON 分析结果。
+这是一个命令行小工具：输入 A 股股票代码与天数，程序会抓取最近 N 天的收盘价与市场情绪信息（含“恐惧与贪婪指数”代理指标），并基于 CrewAI 的多 Agent 架构让大模型以“看多 / 看空 / 持有 / 最终决策”四个角色输出结构化 JSON 分析结果。
 
 适合用来：
 - 快速得到结构化结论（便于接入你自己的工作流/自动化）
@@ -23,7 +24,7 @@
 
 ## English Overview
 
-A CLI tool for China A-shares: fetches recent prices + market context (including a proxy “Fear & Greed Index”), then runs a multi-role LLM debate (Bull / Bear / Hold / Judge) and outputs structured JSON insights.
+A CLI tool for China A-shares: fetches recent prices + market context (including a proxy “Fear & Greed Index”), then runs a CrewAI-based multi-agent debate (Bull / Bear / Hold / Judge) and outputs structured JSON insights.
 
 Great for:
 - Structured outputs (easy to integrate)
