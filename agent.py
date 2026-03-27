@@ -168,7 +168,13 @@ def analyze_stock(ticker, days=5):
     hold_out = parse_and_validate_agent_output(hold_task.output.raw, "HOLD") if hold_task.output else {}
     judge_out = parse_and_validate_judge_output(judge_task.output.raw) if judge_task.output else {}
 
-    advice = {"bull": bull_out, "bear": bear_out, "hold": hold_out, "judge": judge_out}
+    advice = {
+        "bull": bull_out,
+        "bear": bear_out,
+        "hold": hold_out,
+        "judge": judge_out,
+        "market_context": market_context,
+    }
     
     print("AI 分析完成！")
     
