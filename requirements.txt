@@ -2,3 +2,4 @@ akshare
 crewai
 openai
 python-dotenv
+rich
