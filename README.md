@@ -1,4 +1,4 @@
-# A 股恐惧与贪婪指数 + 多 Agent 辩论｜股票分析 CLI / Fear & Greed + Multi‑Agent Stock CLI (China A‑shares)
+# CrewAI 多 Agent 辩论 + A 股恐惧与贪婪指数｜股票分析 CLI / CrewAI Multi‑Agent + Fear & Greed Stock CLI (China A‑shares)
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](#)
@@ -6,6 +6,13 @@
 [![GitHub stars](https://img.shields.io/github/stars/mingyuejianzhao/stock-ai-agent-cli?style=social)](https://github.com/mingyuejianzhao/stock-ai-agent-cli/stargazers)
 
 一句话 / One‑liner：基于 CrewAI 的多 Agent 架构（Bull/Bear/Hold/Judge）+ “Fear & Greed（代理）” 市场情绪快照，输出可直接接入工作流的结构化 JSON。
+
+亮点 / Highlights
+- CrewAI 多 Agent 辩论：Bull / Bear / Hold / Judge
+- A 股市场情绪快照：Fear & Greed（proxy，非官方指数）
+- 结构化输出：JSON 结果可直接接入自动化/工作流
+- 双语界面：中英文 `--lang zh|en`
+- 漂亮的终端输出：`rich`（可选，未安装也能跑）
 
 中文 / English
 - [中文介绍](#中文介绍)
@@ -22,6 +29,8 @@
 - 观察多方观点冲突点（Bull vs Bear vs Hold）
 - 结合情绪指标（Fear & Greed proxy）做市场氛围参考
 
+如果这个项目对你有帮助，欢迎点一个 Star（对开源项目非常重要）。
+
 ## English Overview
 
 A CLI tool for China A-shares: fetches recent prices + market context (including a proxy “Fear & Greed Index”), then runs a CrewAI-based multi-agent debate (Bull / Bear / Hold / Judge) and outputs structured JSON insights.
@@ -30,6 +39,8 @@ Great for:
 - Structured outputs (easy to integrate)
 - Multi-perspective debate (pros/cons/neutral)
 - Quick sentiment snapshot via Fear & Greed proxy
+
+If you find this useful, please consider starring the repo.
 
 ---
 
@@ -41,6 +52,7 @@ Great for:
 - [配置密钥（不要提交到 GitHub）](#配置密钥不要提交到-github)
 - [Quick Start (English)](#quick-start-english)
 - [示例输出 / Demo Output](#示例输出--demo-output)
+- [架构 / Architecture](#架构--architecture)
 - [恐惧与贪婪指数（说明）](#恐惧与贪婪指数说明)
 - [Fear & Greed Index (What it is)](#fear--greed-index-what-it-is)
 - [依赖清单（需要下载）](#依赖清单需要下载)
@@ -132,6 +144,20 @@ Fear & Greed Index
 ```
 
 </details>
+
+## 架构 / Architecture
+
+```mermaid
+flowchart LR
+    A[AkShare Market Data] --> B[Input Pack\nPrices + Market Context]
+    B --> C1[Bull Agent]
+    B --> C2[Bear Agent]
+    B --> C3[Hold Agent]
+    C1 --> J[Judge Agent]
+    C2 --> J
+    C3 --> J
+    J --> O[Structured JSON Output]
+```
 
 ## 恐惧与贪婪指数（说明）
 
