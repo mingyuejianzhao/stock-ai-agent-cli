@@ -1,8 +1,10 @@
-# 股票分析 AI Agent（A 股） / Stock AI Agent (China A-shares)
+# A 股恐惧与贪婪指数 + 多 Agent 辩论｜股票分析 CLI / Fear & Greed + Multi‑Agent Stock CLI (China A‑shares)
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](#)
 [![GitHub stars](https://img.shields.io/github/stars/mingyuejianzhao/stock-ai-agent-cli?style=social)](https://github.com/mingyuejianzhao/stock-ai-agent-cli/stargazers)
+
+一句话 / One‑liner：用 “Fear & Greed（代理）” 快速读市场情绪 + Bull/Bear/Hold/Judge 多 Agent 辩论，输出可直接接入工作流的结构化 JSON。
 
 中文 / English
 - [中文介绍](#中文介绍)
